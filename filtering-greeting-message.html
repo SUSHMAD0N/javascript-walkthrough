@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  </head>
+  <body>
+    <section class="section"></section>
+  </body>
+  <script>
+const greetings = ['Happy Birthday!',
+                 'Merry Christmas my love',
+                 'A happy Christmas to all the family',
+                 'You\'re all I want for Christmas',
+                 'Get well soon'];
+const christmasGreeting = [];
+const section = document.querySelector(".section");
+for (let greeting of greetings) {
+ 
+  if (greeting.includes('Christmas')) {
+    let p1 = document.createElement('p');
+p1.textContent= greeting;
+
+section.appendChild(p1);
+  
+  }
+ 
+}
+
+
+  </script>
+</html>
+

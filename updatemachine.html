@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Update Button</h1>
+    </head>
+    <body>
+        <button id="button1">Start Machine</button>
+        <p>The Machine is stopped</p>
+    </body>
+    <script>
+        const button1=document.querySelector('#button1')
+        const p = document.querySelector('p')
+
+        button1.addEventListener('click', buttonOnclick)
+
+        function buttonOnclick() {
+            console.log('button1',button1.textContent)
+            if(button1.textContent === "Start Machine"){
+                console.log('inside if')
+                button1.textContent="stop Machine";
+                p.textContent ="The Machine is Started"
+            }
+            else{
+                console.log('inside else')
+                button1.textContent="Start Machine";
+                p.textContent ="The Machine is Stoped"
+            }
+
+        }
+    </script>
+</html>
