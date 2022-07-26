@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <h1>Array Practice</h1>
+    </head>
+    <body>
+    <ul class="output"></ul>
+    <p class="output1"></p>
+    </body>
+    <script>
+     const list = document.querySelector('.output');
+const totalBox = document.querySelector('.output1');
+let total = 0;
+list.textContent = '';
+totalBox.textContent = '';
+
+const products = [
+  'Underpants:6.99',
+  'Socks:5.99',
+  'T-shirt:14.99',
+  'Trousers:31.99',
+  'Shoes:23.99',
+];
+
+for (const product of products) {
+  const subArray = product.split(':');
+  const name = subArray[0];
+  const price = Number(subArray[1]);
+  total += price;
+  const itemText = `${name} — $${price}`;
+
+  const listItem = document.createElement('li');
+  listItem.textContent = itemText;
+  list.appendChild(listItem);
+}
+
+totalBox.textContent = `Total: $${total.toFixed(2)}`;
+    </script>
+</html>
