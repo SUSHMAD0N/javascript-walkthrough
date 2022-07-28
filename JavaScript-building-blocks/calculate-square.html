@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+<style>
+    html {
+  width: 100%;
+  height: inherit;
+  background: #ddd;
+}
+canvas {
+  display: block;
+}
+body {
+  margin: 0;
+}
+</style>
+    </head>
+    <body>
+        <button id="calculate">Calculate</button>
+        <button id="clear">Clear</button>
+        <pre id="results"></pre>
+    </body>
+    <script>
+ const results = document.querySelector('#results');
+ const calculateBtn = document.querySelector('#calculate');
+const clearBtn = document.querySelector('#clear');
+
+function calculateSquare(){
+    for(let i=1;i<10;i++ ){
+        const newResult = `${i} x ${i} = ${i * i}`;
+    results.textContent += `${newResult}\n`;
+    }
+    results.textContent += '\nFinished!';
+}
+
+calculateBtn.addEventListener('click',calculateSquare);
+clearBtn.addEventListener('click',()=>results.textContent='')
+
+</script>
+</html>
